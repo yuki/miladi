@@ -129,3 +129,36 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+
+############################################
+##
+## miladi's packages
+##
+############################################
+
+####################
+# Desktop selection
+####################
+networkmanager
+xorg-drivers
+
+
+########
+# GNOME
+########
+gdm
+gnome
+gnome-desktop
+gnome-tweaks
+
+
+####################
+## Rest of packages
+####################
+fastfetch
+git
+firefox
+vlc
+gimp
+terminator
+htop
