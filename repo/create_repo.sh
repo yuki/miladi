@@ -10,7 +10,8 @@ runuser -unobody git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 runuser -unobody makepkg
 
-repo-add  ../miladi.db.tar.gz *.tar.zst
+repo-add  ../miladi.db.tar.gz *pkg.tar*
+mv *pkg.tar* ../
 
 cd ..
 rm -fr yay-bin
