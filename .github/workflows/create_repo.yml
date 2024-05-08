@@ -1,0 +1,39 @@
+name: Create repository
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    container:
+      image: archlinux/archlinux:latest
+      volumes:
+        - miladi:/workdir
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v4
+    - name: Create repository
+      run: |
+        ./repo/create_repo.sh
+    - name: Generate Directory Listings
+      uses: jayanta525/github-pages-directory-listing@v4.0.0
+      with:
+        FOLDER: repo      #directory to generate index
+    - name: Upload artifacts
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: './repo'
+  deploy:
+    needs: build
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2

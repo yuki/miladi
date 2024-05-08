@@ -135,6 +135,10 @@ zsh
 ## miladi's packages
 ##
 ############################################
+base-devel
+#yay
+yay-bin
+
 
 ####################
 # Desktop selection
