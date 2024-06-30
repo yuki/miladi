@@ -121,7 +121,6 @@ usbutils
 vim
 virtualbox-guest-utils-nox
 vpnc
-wezterm-terminfo
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -129,6 +128,9 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+
+# everything above comes from archiso releng folder
+
 
 ############################################
 ##
@@ -144,6 +146,7 @@ yay-bin
 # Desktop selection
 ####################
 networkmanager
+xorg-server
 xorg-drivers
 
 
