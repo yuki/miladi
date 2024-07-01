@@ -34,6 +34,29 @@ mkarchiso -v iso
 ```
 
 Este comando:
-- Usa el contenido del directori `iso` para generar la ISO.
+- Usa el contenido del directorio `iso` para generar la ISO.
 - Crea el contenido `work`, donde se va realizando el trabajo de crear la ISO.
-- La iso se generará en el directorio `out`.
+- La ISO se generará en el directorio `out`.
+
+
+# Tareas
+
+Las tareas a cumplimentar para realizar el proyecto:
+
+- [ ] Generar la configuración de [Calamares](https://calamares.io/)
+  - [ ] Usar la configuración de base de [ALCI-calaramares-config](https://github.com/arch-linux-calamares-installer/alci-calamares-config-zen/tree/master/etc/calamares)
+  - [ ] Poder elegir entre distintos grupos de programas
+  - [ ] ¿Poner un tema propio?
+- [ ] ¿Qué escritorio usar?
+  - [ ] [Gnome](https://www.gnome.org/), [XFCE](https://xfce.org/), [Mate](https://mate-desktop.org/), [Cinnamon](https://github.com/linuxmint/cinnamon)
+  - [ ] No me convence [Plasma](https://kde.org/es/plasma-desktop/) pero igual es la mejor opción
+  - [ ] ¿Posibilidad de elegir uno en el instalador?
+- [ ] ¿Crear un tema propio de escritorio?
+  - [ ] Al menos para poner fondo de escritorio propio
+- [ ] Crear una aplicación de "primer arranque"
+  - [ ] Que tenga opción de lanzar el instalador, acceder a una web con información/wiki...
+  - Ejemplos que pueden servir:
+    - [Arcolinux Welcome app](https://github.com/arcolinux/arcolinux-welcome-app)
+    - [Garuda Linux Welcome](https://gitlab.com/garuda-linux/applications/garuda-welcome)
+- [ ] ¿Usar [chaotic repository](https://aur.chaotic.cx/)?
+- [ ] Crear tema para Grub/arranque de la ISO
