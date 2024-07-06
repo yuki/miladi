@@ -51,7 +51,7 @@ less
 lftp
 libfido2
 libusb-compat
-linux
+linux-zen
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -140,6 +140,9 @@ zsh
 base-devel
 #yay
 yay-bin
+alci-calamares
+miladi-calamares-config
+os-prober
 
 
 ####################
