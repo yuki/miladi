@@ -43,8 +43,8 @@ Este comando:
 
 Las tareas a cumplimentar para realizar el proyecto:
 
-- [ ] Generar la configuración de [Calamares](https://calamares.io/)
-  - [ ] Usar la configuración de base de [ALCI-calaramares-config](https://github.com/arch-linux-calamares-installer/alci-calamares-config-zen/tree/master/etc/calamares)
+- [x] Generar la configuración de [Calamares](https://calamares.io/)
+  - [x] Usar la configuración y creado repositorio [miladi-calamares-config](https://github.com/yuki/miladi-calamares-config)
   - [ ] Poder elegir entre distintos grupos de programas
   - [ ] ¿Poner un tema propio?
 - [ ] ¿Qué escritorio usar?

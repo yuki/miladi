@@ -137,12 +137,9 @@ zsh
 ## miladi's packages
 ##
 ############################################
-base-devel
-#yay
-yay-bin
 alci-calamares
 miladi-calamares-config
-os-prober
+yay-bin
 
 
 ####################
@@ -153,9 +150,9 @@ xorg-server
 xorg-drivers
 
 
-########
-# GNOME
-########
+###########
+# DESKTOP
+###########
 gdm
 gnome
 gnome-desktop
@@ -165,10 +162,13 @@ gnome-tweaks
 ####################
 ## Rest of packages
 ####################
+base-devel
 fastfetch
-git
 firefox
-vlc
 gimp
-terminator
+git
+gparted
 htop
+os-prober
+terminator
+vlc
