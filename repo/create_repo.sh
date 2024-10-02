@@ -2,34 +2,38 @@
 
 ###########
 #
-# THIS IS A PROOF OF CONCEPT!
+# The creation of the packages for Miladi's repo
 #
 ###########
 
 cd repo
 
+PACKAGES=(
+    "https://aur.archlinux.org/yay-bin.git yay-bin"
+    "https://github.com/yuki/miladi-calamares-config miladi-calamares-config"
+    "https://github.com/yuki/miladi-live-service.git miladi-live-service"
+)
+
+
+create_package() {
+    url="$1"
+    name="$2"
+
+    mkdir $name
+    chmod 777 $name
+    runuser -unobody git clone $url
+    cd $name
+    runuser -unobody makepkg
+
+    repo-add  ../miladi.db.tar.gz *pkg.tar*
+    mv *pkg.tar* ../
+
+    cd ..
+    rm -fr $name
+}
+
 pacman -Sy --noconfirm git base-devel
 
-mkdir yay-bin
-chmod 777 yay-bin
-runuser -unobody git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-runuser -unobody makepkg
-
-repo-add  ../miladi.db.tar.gz *pkg.tar*
-mv *pkg.tar* ../
-
-cd ..
-rm -fr yay-bin
-
-mkdir miladi-calamares-config
-chmod 777 miladi-calamares-config
-runuser -unobody git clone https://github.com/yuki/miladi-calamares-config
-cd miladi-calamares-config
-runuser -unobody makepkg
-
-repo-add  ../miladi.db.tar.gz *pkg.tar*
-mv *pkg.tar* ../
-
-cd ..
-rm -fr miladi-calamares-config
+for value in "${PACKAGES[@]}"; do
+  create_package $value
+done
