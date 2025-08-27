@@ -32,7 +32,6 @@ f2fs-tools
 fatresize
 foot-terminfo
 fsarchiver
-gnu-netcat
 gpart
 gpm
 gptfdisk
@@ -51,7 +50,7 @@ less
 lftp
 libfido2
 libusb-compat
-linux-zen
+linux
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -94,8 +93,6 @@ pv
 qemu-guest-agent
 refind
 reflector
-reiserfsprogs
-rp-pppoe
 rsync
 rxvt-unicode-terminfo
 screen
@@ -139,12 +136,13 @@ zsh
 ############################################
 alci-calamares
 miladi-calamares-config
+miladi-live-service
 yay-bin
 
 
-####################
-# Desktop selection
-####################
+#####################
+## Desktop selection
+#####################
 networkmanager
 xorg-server
 xorg-drivers

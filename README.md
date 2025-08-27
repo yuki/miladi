@@ -60,3 +60,25 @@ Las tareas a cumplimentar para realizar el proyecto:
     - [Garuda Linux Welcome](https://gitlab.com/garuda-linux/applications/garuda-welcome)
 - [ ] ¿Usar [chaotic repository](https://aur.chaotic.cx/)?
 - [ ] Crear tema para Grub/arranque de la ISO
+
+
+# PROCESOS
+
+read_profile ->  _set_overrides -> _validate_options -> _build -> _build_buildmode_iso -> _build_iso_base
+
+_run_once _make_work_dir
+_run_once _make_pacman_conf
+_run_once _make_custom_airootfs
+_run_once _make_packages
+_run_once _make_version
+_run_once _make_customize_airootfs
+_run_once _make_pkglist
+_run_once _check_if_initramfs_has_ucode
+  
+  _run_once _make_boot_on_iso9660  ||    _make_bootmodes
+
+_run_once _cleanup_pacstrap_dir
+_run_once _prepare_airootfs_image
+
+
+_build_iso_image

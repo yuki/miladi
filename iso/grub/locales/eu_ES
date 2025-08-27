@@ -1,0 +1,10 @@
+lang=eu
+bootlang="lang=eu_ES"
+def_bootlang="eu_ES"
+language="Euskara"
+if [ -z "${keyboard}" ]; then
+  def_keyboard="es"
+fi
+if [ -z "${timezone}" ]; then
+  def_timezone="Europe/Madrid"
+fi
