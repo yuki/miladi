@@ -8,7 +8,7 @@
 
 PACKAGES=(
     "https://aur.archlinux.org/yay-bin.git yay-bin"
-    "https://gitlab.manjaro.org/packages/extra/calamares.git calamares"
+    "https://github.com/yuki/miladi-calamares.git miladi-calamares"
     "https://github.com/yuki/miladi-calamares-config miladi-calamares-config"
     "https://github.com/yuki/miladi-live-service.git miladi-live-service"
 )
@@ -18,11 +18,13 @@ create_package() {
     url="$1"
     name="$2"
 
+    echo "CREATING $name"
+
     mkdir $name
     chmod 777 $name
     runuser -unobody git clone $url
     cd $name
-    source PKGBUILD && yay -Syu --noconfirm --needed --asdeps "${makedepends[@]}" "${depends[@]}"
+    source PKGBUILD && pacman -Syu --noconfirm --needed --asdeps "${makedepends[@]}" "${depends[@]}"
     runuser -unobody makepkg
 
     mv *pkg.tar* ../
