@@ -134,7 +134,7 @@ zsh
 ## miladi's packages
 ##
 ############################################
-alci-calamares
+miladi-calamares
 miladi-calamares-config
 miladi-live-service
 yay-bin
@@ -151,10 +151,8 @@ xorg-drivers
 ###########
 # DESKTOP
 ###########
-gdm
-gnome
-gnome-desktop
-gnome-tweaks
+sddm
+plasma-meta
 
 
 ####################
